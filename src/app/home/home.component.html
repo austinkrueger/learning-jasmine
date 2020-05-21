@@ -1,0 +1,65 @@
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-1">
+      <div class="column" *ngFor="let user of users">
+        <div class="box">
+          <div class="content">
+            <div class="img-container">
+              <img [src]="user.pokemonImgUrl" class="poke-img" />
+            </div>
+            <p class="has-text-centered is-size-5">{{ user.name }}</p>
+            <ul>
+              <li><strong>Role:</strong> {{ user.role }}</li>
+              <li>
+                <strong>Pokemon:</strong>
+                <a [href]="user.pokemonUrl" target="_blank">
+                  {{ user.pokemon }}</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column"></div>
+      <div class="column">
+        <div class="buttons is-centered">
+          <button class="button is-medium is-outlined" (click)="randomize()">
+            <span class="icon">
+              <i class="fas fa-sync"></i>
+            </span>
+            <span>Randomize it!</span>
+          </button>
+        </div>
+      </div>
+      <div class="column"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <article class="message is-primary">
+      <div class="message-header">
+        <p>Hello, internet user!</p>
+      </div>
+      <div class="message-body">
+        This is just a fun little application that helped me on my journey to
+        learn more about Test Driven Development. I was following an example
+        that started
+        <a
+          href="https://scotch.io/tutorials/testing-angular-with-jasmine-and-karma-part-1"
+          >here</a
+        >. I decided to take it a step further with actually adding in the
+        PokeAPI service as well as a little Randomizer service to further my
+        practice with testing in Angular. Thanks for reading!
+      </div>
+    </article>
+  </div>
+</section>
